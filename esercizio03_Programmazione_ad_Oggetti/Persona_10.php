@@ -35,5 +35,7 @@ trait Saluti // in buona sostanza questo trait 'Saluti' e' una sorta di classe
     echo $b->italiano();
     echo "<br>";
     echo $b->inglese();
+    echo "<br>";
+    echo $b->francese();
 
 ?>
