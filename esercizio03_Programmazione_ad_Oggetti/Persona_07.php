@@ -3,8 +3,6 @@
 // nelle classi ma anche ai metodi di una classe che possono essere richiamati anche senza la 
 // creazione diun oggetto specifico. Sono i cosiddetti metodi statici.
 
-use Persona as GlobalPersona;
-use Utente as GlobalUtente;
 
 class Calcolo
 {
