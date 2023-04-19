@@ -1,0 +1,60 @@
+input[type=text], input[type=number], input[type=tel], select {
+    border: 2px solid blue;
+    border-radius: 4px;
+    float: right;
+  }
+
+  legend {
+    background-color: #021a51;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+
+input[type=submit] {
+    background-color: #021a51;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+   /* float: right; */
+  }
+  input[type=reset] {
+    background-color: #021a51;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+   /* float: right; */
+  }
+  
+  input[type=submit]:hover {
+    background-color: #358fc4;
+  }
+
+  input[type=reset]:hover {
+    background-color: #358fc4;
+  }
+
+input {
+    margin: 0.4rem;
+}
+
+fieldset {
+    border-color: blue;
+    border-style: groove;
+    border-width: 6px;
+    width: max-content;
+}
+
+.sufficiente {
+  color: green;
+}
+
+.insufficiente {
+  color: red;
+}
+
+  

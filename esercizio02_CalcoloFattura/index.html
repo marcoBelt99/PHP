@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Invio dati</title>
+
+    <!-- Importo gli stili personalizzati -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Importo i miei script JavaScript -->
+    <script src="script.js" ></script>
+</head>
+<body>
+    <header>
+        <h1>Invio dei dati fattura</h1>
+    </header>
+    <section>
+        <form action="calcolaFattura_step1.php" method="get">
+            <fieldset>
+                <p>
+                    <label for="data">Data</label>
+                    <input type="date" name="data_fattura" id="dataFattura">
+                </p>
+
+                <p>
+                    <label for="qta">Quantita'</label>
+                    <input type="number" name="quantita" id="quantita" required>
+                </p>
+
+                <p>
+                    <label for="prezzoUnitario">Prezzo unitario</label>
+                    <input type="number" name="prezzo_unitario" id="prezzoUnitario" min="0.0" required step=".01">
+                </p>
+                <!--  TODO: attento: l'evento onsubmit() non so perchè ma non funzionava, allora ho metto onclick()-->
+                <input type="submit" name="invio_dati" value="Invia" onclick="return validazione()">
+                <input type="reset" value="Annulla">
+            </fieldset>
+        </form>
+    </section>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>Pagina invio dati</title>
+        <script src="programma.js"></script>
+    </head>
+    <body>
+        <form method="post" action="elabora.php" name="registrazione" onsubmit="return controlloForm()">
+            <fieldset>
+                <legend>Registrazione utente</legend>
+                <p><input name="nome" type="text" placeholder="Nome" size="50"></p>
+                <p><input name="cognome" type="text" placeholder="Cognome" size="50"></p>
+                <p><input name="email" type="text" placeholder="E-mail"size="50"></p>
+                <input name="invia" type="submit" value="Invia">
+                <input name="annulla" type="reset" value="Annulla">
+            </fieldset>
+
+        </form>
+    </body>
+</html>
