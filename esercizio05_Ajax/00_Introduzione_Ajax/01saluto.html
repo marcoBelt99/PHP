@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salve mondo da AJAX</title>
+</head>
+
+<body>
+    <script>
+        function salveMondo() {
+            // Creo l'oggetto AJAX
+            var request = new XMLHttpRequest();
+            // L'evento onreadystatechange viene chiamato automaticamente a ogni modifica del valore readyState
+            request.onreadystatechange = function () {
+                // Se la richiesta e' stata completata (== 4) e lo status e' == 200
+                if (request.readyState == 4 && request.status == 200) {
+                    // Inserisci nel div con ID uguale a "saluto" il valore restituito dal server gestito tramite la proprietà
+                    // responseText
+                    document.getElementById("saluto").innerHTML = request.responseText;
+                }
+            }
+
+            // Effettuo materialmente la chiamata GET al server su cui risiede la pagina che sto richiedendo
+            request.open("GET", "files/saluto_ajax.txt");
+            // La richiesta viene inviata effettivamente
+            request.send();
+        }
+    </script>
+    <h1>Salutiamo il mondo</h1>
+    <form >
+        <!-- Uso l'evento onclick del bottone per richiamare la funzione salveMondo() all'interno della quale gestisco il codice per 
+             la chiamata AJAX -->
+        <input type="button" value="Ci sei?" onclick="salveMondo()">
+    </form>
+
+    <!-- Il contenuto del file di testo lo inserisco in questo div qui -->
+    <div id="saluto"></div>
+</body>
+
+</html>

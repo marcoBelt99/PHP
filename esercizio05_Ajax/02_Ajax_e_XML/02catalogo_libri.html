@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>La mia libreria</title>
+</head>
+<body>
+    <script>
+        function caricaLibri()
+        {
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function() {
+                if(request.readyState == 4 && request.status==200)
+                {
+                    // Uso request.responseXML invece che request.responseText
+                    var xml = request.responseXML; // Ottengo il documento XML restituito dal server
+                    // getElementByTagName() restituisce tutti gli elementi nel documento aventi il 
+                    // nome del tag specificato, nel mio caso il tag <libro>.
+                    var x = xml.getElementsByTagName("libro"); // Ottengo una collection di tutti gli elementi (nodi) nel documento XML che hanno il tag "libro"
+                    var lista = "";
+                    // Scandisco la collection andando a prendere i nodi "titolo" e "anno" con i quali costruisco una lista di tipo HTML
+                    for(var i=0; i<x.length; i++) {
+                        lista += "<li>" +
+                        // Per ogni singolo nodo di nome "libro", codificato nell'elemento i-esimo della collection x, prendo il contenuto del tag con nome "titolo" 
+                        x[i].getElementsByTagName("titolo")[0].innerHTML + 
+                        " - " +
+                        x[i].getElementsByTagName("anno")[0].innerHTML +
+                        "</li>";
+                    }
+
+                    document.getElementById("libri").innerHTML = lista;
+                }
+            }
+
+            request.open("GET", "libri.xml");
+            request.send();
+        }
+    </script>
+
+    <h1>La mia libreria in XML - Versione Professional</h1>
+    <form>
+        <input type="button" value="Cerca" onclick="caricaLibri()">
+    </form>
+
+    <div id="libri"></div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<libri>
+    <libro>
+        <titolo>C e C++. Le chiavi della programmazione</titolo>
+        <editore>FAG</editore>
+        <autore>
+            <nome>Carlo Adelfio</nome>
+            <cognome>Mazzone</cognome>
+        </autore>
+        <numeropagine>384</numeropagine>
+        <anno>2013</anno>
+        <ISBN>978-8866043614</ISBN>
+        <prezzo valuta="euro">32.00</prezzo>
+    </libro>
+    <libro>
+        <titolo>Il potere del comando. Diventare utenti avanzati con
+            l'interfaccia testuale</titolo>
+        <editore>Ledizioni</editore>
+        <autore>
+            <nome>Carlo Adelfio</nome>
+            <cognome>Mazzone</cognome>
+        </autore>
+        <numeropagine>80</numeropagine>
+        <anno>2014</anno>
+        <ISBN>978-8867053018</ISBN>
+        <prezzo valuta="euro">8.00</prezzo>
+    </libro>
+    <libro>
+        <titolo>C e C++. Le chiavi della programmazione</titolo>
+        <editore>LSWR</editore>
+        <autore>
+            <nome>Carlo Adelfio</nome>
+            <cognome>Mazzone</cognome>
+        </autore>
+        <numeropagine>448</numeropagine>
+        <anno>2016</anno>
+        <ISBN>978-8868953300</ISBN>
+        <prezzo valuta="euro">29.90</prezzo>
+    </libro>
+    <libro>
+        <titolo>La shell testuale. Diventare utenti avanzati con la riga di
+            comando</titolo>
+        <editore>LSWR</editore>
+        <autore>
+            <nome>Carlo Adelfio</nome>
+            <cognome>Mazzone</cognome>
+        </autore>
+        <numeropagine>384</numeropagine>
+        <anno>2019</anno>
+        <ISBN>978-8868957575</ISBN>
+        <prezzo valuta="euro">26.90</prezzo>
+    </libro>
+</libri>

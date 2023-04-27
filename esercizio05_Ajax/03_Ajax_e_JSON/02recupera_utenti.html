@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Utenti AJAX - JSON</title>
+</head>
+<body>
+    <script>
+        function cercaUtenti() {
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function() {
+                if(request.readyState == 4 && request.status == 200)
+                {
+                    // Sposto la logica di business alla funzione LeggiArray()
+                    // this si riferisce all'oggetto request di tipo XMLHttpRequest
+                    LeggiArray(this.responseText);
+                }
+            }
+            request.open("GET", "files/02utenti.json");
+            request.send();
+        }
+
+        function LeggiArray(response) {
+            // Parso il contenuto JSON passato dal server ottenendo in tal modo un array di tipo JavaScript che chiamo persona
+            var persona = JSON.parse(response);
+            var i;
+            var html = "<table border='1'>";
+            
+            // Scandisco l'array. 
+            for(i = 0; i < persona.length; i++)
+            {
+            //Ad ogni iterazione prendo l'i-esimo elemento dell'array e ne estraggo i membri
+            // e costruisco una stringa di codice HTML che realizzi una tabella
+                html += "<tr><td>" +
+                    persona[i].nome +  
+                    "</td><td>" + 
+                    persona[i].cognome +
+                    "</td><td>" +
+                    persona[i].email +
+                    "</td></tr>";
+            }
+            html += "</table>";
+            document.getElementById("output").innerHTML = html;
+        }
+    </script>
+    <h1>Utenti AJAX - JSON</h1>
+    <form >
+        <input type="button" value="Cerca" onclick="cercaUtenti()">
+    </form>
+
+    <div id="output"></div>
+</body>
+</html>

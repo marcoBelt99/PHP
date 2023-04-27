@@ -1,0 +1,4 @@
+Questo testo e' ha lo scopo di essere letto e stampato nella pagina web di servizio dedicata.
+In generale, si vuole apprendere AJAX come meccanismo di gestione asincrona delle richieste di un Client verso un Server.
+Con AJAX possiamo implementare le pagine SPA (Single Page Application) che si contrappongono alle pagine server side rendering (applicazioni classiche
+che richiedono il caricamente dell'intera pagina)
